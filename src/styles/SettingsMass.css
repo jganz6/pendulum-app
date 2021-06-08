@@ -1,0 +1,25 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.settings-container {
+  background-color: rgb(37, 37, 37);
+  color: #fff;
+  border-radius: 20px;
+  width: 200px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.item-settings {
+  padding: 10px 0 10px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.item2-row {
+  width: 50%;
+  display: flex;
+}
