@@ -3,7 +3,11 @@ import "./../styles/ObjectItem.css";
 
 function ObjectItem(props) {
   const obj = "block";
-  const { playPendulum, setPlayPendulum } = props;
+  const { playPendulum, setPlayPendulum, setObjLeftAngle } = props;
+  const stopPendulum = () => {
+    setPlayPendulum(false);
+    setObjLeftAngle(0);
+  };
   return (
     <div
       className={
@@ -16,7 +20,7 @@ function ObjectItem(props) {
     >
       <button
         onClick={() => {
-          playPendulum ? setPlayPendulum(false) : setPlayPendulum(true);
+          playPendulum ? stopPendulum() : setPlayPendulum(true);
         }}
       >
         {playPendulum ? "Stop" : "Play"}
