@@ -1,7 +1,8 @@
 import React from "react";
 import "./../styles/SettingsMass.css";
 
-function SettingsMass() {
+function SettingsMass(props) {
+  const { objLength, setObjLength } = props;
   return (
     <div className="settings-container">
       <form>
@@ -9,11 +10,22 @@ function SettingsMass() {
           <label className="item2-row" htmlFor="length1">
             Length 1
           </label>
-          <input name="length1" className="item2-row" value="1.17" />
+          <input
+            name="length1"
+            className="item2-row"
+            value={objLength}
+            onChange={(e) => setObjLength(e.target.value)}
+          />
         </div>
         <div className="item-settings">
           <button style={{ transform: "rotate(180deg)" }}>&#10148;</button>
-          <input name="rangeLength" className="item2-row" type="range" />
+          <input
+            name="rangeLength"
+            className="item2-row"
+            type="range"
+            value={objLength}
+            onChange={(e) => setObjLength(e.target.value)}
+          />
           <button>&#10148;</button>
         </div>
         <div className="item-settings">

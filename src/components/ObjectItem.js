@@ -3,6 +3,7 @@ import "./../styles/ObjectItem.css";
 
 function ObjectItem(props) {
   const obj = "block";
+  const { playPendulum, setPlayPendulum } = props;
   return (
     <div
       className={
@@ -12,7 +13,15 @@ function ObjectItem(props) {
           ? "normalItem circle"
           : "normalItem block"
       }
-    ></div>
+    >
+      <button
+        onClick={() => {
+          playPendulum ? setPlayPendulum(false) : setPlayPendulum(true);
+        }}
+      >
+        {playPendulum ? "Stop" : "Play"}
+      </button>
+    </div>
   );
 }
 
