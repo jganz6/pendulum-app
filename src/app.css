@@ -1,0 +1,12 @@
+.App {
+  display: flex;
+}
+.sideSec {
+  position: relative;
+  height: 100vh;
+  width: 280px;
+  display: flex;
+}
+.midSec {
+  width: calc(100vw - 560px);
+}

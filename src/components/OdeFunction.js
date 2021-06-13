@@ -1,5 +1,5 @@
 // Solve ODE `dx/dt = f(x,t), x(0) = x0` numerically.
-const math = {};
+import math from "mathjs";
 function ndsolve(f, x0, dt, tmax) {
   let x = x0.clone(); // Current values of variables
   const result = [x]; // Contains entire solution

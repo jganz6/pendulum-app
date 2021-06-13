@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./../styles/Pendulum.css";
 function Pendulum(props) {
-  const { amplitudoPlus, amplitudoMinus } = props;
+  const { amplitudoPlus, amplitudoMinus, objForm } = props;
   const [periode, setPeriode] = useState(3);
-  const objForm = "circle"; //circle || rectangle || block
   useEffect(() => {
     let lngth = props.objLength / 400;
     setPeriode((Math.PI / Math.sqrt(9.81 / lngth)) * 2);

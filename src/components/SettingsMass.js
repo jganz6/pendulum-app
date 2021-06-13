@@ -15,13 +15,13 @@ function SettingsMass(props) {
       <form>
         <div className="item-settings">
           <label className="item2-row" htmlFor="length1">
-            Length 1
+            Length 1 (m)
           </label>
           <input
             name="length1"
             className="item2-row"
-            value={objLength}
-            onChange={(e) => setObjLength(e.target.value)}
+            value={objLength / 400}
+            onChange={(e) => setObjLength(e.target.value * 400)}
           />
         </div>
         <div className="item-settings">
@@ -39,7 +39,7 @@ function SettingsMass(props) {
         </div>
         <div className="item-settings">
           <label className="item2-row" htmlFor="mass1">
-            Mass 1
+            Mass 1 (kg)
           </label>
           <input
             name="mass1"
@@ -61,7 +61,7 @@ function SettingsMass(props) {
         </div>
         <div className="item-settings">
           <label className="item2-row" htmlFor="length1">
-            Initial left angle
+            Initial left angle (deg)
           </label>
           <input
             name="leftAngle"

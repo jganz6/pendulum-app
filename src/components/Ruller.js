@@ -4,6 +4,28 @@ import "./../styles/Ruller.css";
 function Ruller() {
   return (
     <div className="ruler-container">
+      {/* <ol id="rule">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ol> */}
       <div className="ruler">
         <div className="cm">
           <div className="mm"></div>
