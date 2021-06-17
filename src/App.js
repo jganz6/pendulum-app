@@ -6,6 +6,7 @@ import ObjectItem from "./components/ObjectItem";
 import Pendulum from "./components/Pendulum";
 import Stopwatch from "./components/Stopwatch";
 // import Canvas from "./contexts/Canvas";
+import LogoUpi from "./images/logo-upi.png";
 import "./app.css";
 
 function App() {
@@ -30,6 +31,16 @@ function App() {
   return (
     <div className="App">
       <div className="sideSec">
+        <div className="headSecStart">SIMPLE HARMONIC MOTION SIMULATION</div>
+        <div className="headerSec">
+          <img src={LogoUpi} alt="LogoUpi" />
+          <div className="textHeader">
+            <div>Program Studi Pendidikan Fisika</div>
+            <div>Universitas Pendidikan Indonesia</div>
+            <br />
+            <div>Oleh :Nurhasanah(170194)</div>
+          </div>
+        </div>
         <Ruller />
       </div>
       <div className="midSec">

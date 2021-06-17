@@ -28,6 +28,12 @@ function SettingsMass(props) {
           <button
             className="border-but"
             style={{ transform: "rotate(180deg)" }}
+            type="button"
+            onClick={() => {
+              objLength > 0
+                ? setObjLength(objLength - 4)
+                : setObjLength((prevState) => prevState);
+            }}
           >
             &#10148;
           </button>
@@ -36,11 +42,21 @@ function SettingsMass(props) {
             className="item2-row "
             type="range"
             value={objLength}
-            onChange={(e) => setObjLength(e.target.value)}
+            onChange={(e) => setObjLength(Number(e.target.value))}
             min="0"
             max="400"
           />
-          <button className="border-but">&#10148;</button>
+          <button
+            className="border-but"
+            type="button"
+            onClick={() => {
+              objLength < 400
+                ? setObjLength((prevState) => prevState + 4)
+                : setObjLength((prevState) => prevState);
+            }}
+          >
+            &#10148;
+          </button>
         </div>
         <div className="item-settings">
           <label className="item2-row" htmlFor="mass1">
@@ -57,6 +73,12 @@ function SettingsMass(props) {
           <button
             className="border-but"
             style={{ transform: "rotate(180deg)" }}
+            type="button"
+            onClick={() => {
+              objMass > 0
+                ? setObjMass((prevState) => prevState - 1)
+                : setObjMass((prevState) => prevState);
+            }}
           >
             &#10148;
           </button>
@@ -65,9 +87,20 @@ function SettingsMass(props) {
             className="item2-row"
             type="range"
             value={objMass}
-            onChange={(e) => setObjMass(e.target.value)}
+            onChange={(e) => setObjMass(Number(e.target.value))}
+            maxLength="100"
           />
-          <button className="border-but">&#10148;</button>
+          <button
+            className="border-but"
+            type="button"
+            onClick={() => {
+              objMass < 100
+                ? setObjMass((prevState) => prevState + 1)
+                : setObjMass((prevState) => prevState);
+            }}
+          >
+            &#10148;
+          </button>
         </div>
         <div className="item-settings">
           <label className="item2-row" htmlFor="length1">
@@ -86,6 +119,12 @@ function SettingsMass(props) {
           <button
             className="border-but"
             style={{ transform: "rotate(180deg)" }}
+            type="button"
+            onClick={() => {
+              objLeftAngle > -90
+                ? setObjLeftAngle((prevState) => prevState - 1)
+                : setObjLeftAngle((prevState) => prevState);
+            }}
           >
             &#10148;
           </button>
@@ -94,11 +133,21 @@ function SettingsMass(props) {
             className="item2-row"
             type="range"
             value={objLeftAngle}
-            onChange={(e) => setObjLeftAngle(e.target.value)}
+            onChange={(e) => setObjLeftAngle(Number(e.target.value))}
             min="-90"
             max="90"
           />
-          <button className="border-but">&#10148;</button>
+          <button
+            className="border-but"
+            type="button"
+            onClick={() => {
+              objLeftAngle < 90
+                ? setObjLeftAngle((prevState) => prevState + 1)
+                : setObjLeftAngle((prevState) => prevState);
+            }}
+          >
+            &#10148;
+          </button>
         </div>
       </form>
     </div>

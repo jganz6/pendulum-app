@@ -30,6 +30,8 @@
 }
 .border-but {
   background-color: #5784ba;
+  text-align: center;
+  padding: 0;
   color: #fff;
   outline: none;
   border: none;

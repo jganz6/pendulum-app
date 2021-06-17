@@ -6,9 +6,41 @@
   height: 100vh;
   width: 280px;
   display: flex;
+  flex-direction: column;
   background-color: #5784ba;
 }
 .midSec {
   width: calc(100vw - 560px);
   background-color: #adc3df;
+}
+.headerSec {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 12px;
+}
+.headerSec > img {
+  width: 80px;
+  height: 80px;
+}
+.headerSec > .textHeader {
+  flex: 1;
+}
+.headerSec > .textHeader > div {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+.headSecStart {
+  align-self: flex-start;
+  font-family: fantasy;
+  font-weight: 700;
+  background-color: #e6e6e6;
+  color: #5784ba;
+  font-size: 20px;
+  padding: 5px;
 }
