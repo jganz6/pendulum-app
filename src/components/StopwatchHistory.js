@@ -58,8 +58,12 @@ class StopwatchHistory extends React.Component {
   render() {
     return (
       <div className={"stopwatch__history"}>
-        <button onClick={this.saveTime}>SAVE TIME</button>
-        <button onClick={this.resetHistory}>RESET HISTORY</button>
+        <button className="btn-blk" onClick={this.saveTime}>
+          SAVE TIME
+        </button>
+        <button className="btn-blk" onClick={this.resetHistory}>
+          RESET HISTORY
+        </button>
         <h3>History</h3>
         <ul>
           {this.state.history.map((item, index) => (

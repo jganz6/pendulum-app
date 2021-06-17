@@ -8,6 +8,7 @@ function ObjectItem(props) {
     setObjLeftAngle,
     objForm,
     setObjForm,
+    // setSectionPage,
   } = props;
   // function ndsolve(f, x0, dt, tmax) {
   //   let x = x0.clone(); // Current values of variables
@@ -48,14 +49,23 @@ function ObjectItem(props) {
         {playPendulum ? "Stop" : "Play"}
       </button>
       <select
-        style={{ width: "100px", height: "50%" }}
+        className="inputSet"
         value={objForm}
         onChange={(e) => setObjForm(e.target.value)}
       >
-        <option value="circle">circle</option>
-        <option value="rectangle">rectangle</option>
-        <option value="block">block</option>
+        <option value="circle" style={{ textAlign: "center" }}>
+          circle
+        </option>
+        <option value="rectangle" style={{ textAlign: "center" }}>
+          rectangle
+        </option>
+        <option value="block" style={{ textAlign: "center" }}>
+          block
+        </option>
       </select>
+      {/* <button className="buttonSet" onClick={() => setSectionPage(1)}>
+        section page
+      </button> */}
     </div>
   );
 }

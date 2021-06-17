@@ -6,7 +6,9 @@
   height: 100vh;
   width: 280px;
   display: flex;
+  background-color: #5784ba;
 }
 .midSec {
   width: calc(100vw - 560px);
+  background-color: #adc3df;
 }

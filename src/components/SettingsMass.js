@@ -19,23 +19,28 @@ function SettingsMass(props) {
           </label>
           <input
             name="length1"
-            className="item2-row"
+            className="item2-row border-inp"
             value={objLength / 400}
             onChange={(e) => setObjLength(e.target.value * 400)}
           />
         </div>
-        <div className="item-settings">
-          <button style={{ transform: "rotate(180deg)" }}>&#10148;</button>
+        <div className="item-settings border-rad">
+          <button
+            className="border-but"
+            style={{ transform: "rotate(180deg)" }}
+          >
+            &#10148;
+          </button>
           <input
             name="rangeLength"
-            className="item2-row"
+            className="item2-row "
             type="range"
             value={objLength}
             onChange={(e) => setObjLength(e.target.value)}
             min="0"
             max="400"
           />
-          <button>&#10148;</button>
+          <button className="border-but">&#10148;</button>
         </div>
         <div className="item-settings">
           <label className="item2-row" htmlFor="mass1">
@@ -43,13 +48,18 @@ function SettingsMass(props) {
           </label>
           <input
             name="mass1"
-            className="item2-row"
+            className="item2-row border-inp"
             value={objMass}
             onChange={(e) => setObjMass(e.target.value)}
           />
         </div>
-        <div className="item-settings">
-          <button style={{ transform: "rotate(180deg)" }}>&#10148;</button>
+        <div className="item-settings border-rad">
+          <button
+            className="border-but"
+            style={{ transform: "rotate(180deg)" }}
+          >
+            &#10148;
+          </button>
           <input
             name="rangeLength"
             className="item2-row"
@@ -57,7 +67,7 @@ function SettingsMass(props) {
             value={objMass}
             onChange={(e) => setObjMass(e.target.value)}
           />
-          <button>&#10148;</button>
+          <button className="border-but">&#10148;</button>
         </div>
         <div className="item-settings">
           <label className="item2-row" htmlFor="length1">
@@ -65,15 +75,20 @@ function SettingsMass(props) {
           </label>
           <input
             name="leftAngle"
-            className="item2-row"
+            className="item2-row border-inp"
             value={objLeftAngle}
             onChange={(e) => setObjLeftAngle(e.target.value)}
             min="-90"
             max="90"
           />
         </div>
-        <div className="item-settings">
-          <button style={{ transform: "rotate(180deg)" }}>&#10148;</button>
+        <div className="item-settings border-rad">
+          <button
+            className="border-but"
+            style={{ transform: "rotate(180deg)" }}
+          >
+            &#10148;
+          </button>
           <input
             name="rangeLeftAngle"
             className="item2-row"
@@ -83,7 +98,7 @@ function SettingsMass(props) {
             min="-90"
             max="90"
           />
-          <button>&#10148;</button>
+          <button className="border-but">&#10148;</button>
         </div>
       </form>
     </div>
