@@ -5,7 +5,7 @@ import Ruller from "./components/Ruller";
 import ObjectItem from "./components/ObjectItem";
 import Pendulum from "./components/Pendulum";
 import Stopwatch from "./components/Stopwatch";
-import Canvas from "./contexts/Canvas";
+// import Canvas from "./contexts/Canvas";
 import "./app.css";
 
 function App() {
@@ -26,49 +26,44 @@ function App() {
       setAmplitudoMinus(-Math.abs(objLeftAngle));
     }
   }, [objLeftAngle]);
+  console.log(sectionPage);
   return (
     <div className="App">
-      {sectionPage === 0 ? (
-        <>
-          <div className="sideSec">
-            <Ruller />
-          </div>
-          <div className="midSec">
-            <Pendulum
-              objForm={objForm}
-              objLength={objLength}
-              playPendulum={playPendulum}
-              objMass={objMass}
-              objLeftAngle={objLeftAngle}
-              amplitudoPlus={amplitudoPlus}
-              amplitudoMinus={amplitudoMinus}
-            />
-          </div>
-          <div className="sideSec" style={{ flexDirection: "column" }}>
-            <SettingsMass
-              objLeftAngle={objLeftAngle}
-              setObjLeftAngle={(angl) => setObjLeftAngle(angl)}
-              objMass={objMass}
-              setObjMass={(mass) => setObjMass(mass)}
-              objLength={objLength}
-              setObjLength={(length) => setObjLength(length)}
-            />
-            <div>{"     ."}</div>
-            {/* <SettingsGravity /> */}
-            <ObjectItem
-              objForm={objForm}
-              setObjForm={(obj) => setObjForm(obj)}
-              setObjLeftAngle={(angl) => setObjLeftAngle(angl)}
-              playPendulum={playPendulum}
-              setPlayPendulum={(choice) => setPlayPendulum(choice)}
-              setSectionPage={(choice) => setSectionPage(choice)}
-            />
-            <Stopwatch />
-          </div>
-        </>
-      ) : (
-        <Canvas />
-      )}
+      <div className="sideSec">
+        <Ruller />
+      </div>
+      <div className="midSec">
+        <Pendulum
+          objForm={objForm}
+          objLength={objLength}
+          playPendulum={playPendulum}
+          objMass={objMass}
+          objLeftAngle={objLeftAngle}
+          amplitudoPlus={amplitudoPlus}
+          amplitudoMinus={amplitudoMinus}
+        />
+      </div>
+      <div className="sideSec" style={{ flexDirection: "column" }}>
+        <SettingsMass
+          objLeftAngle={objLeftAngle}
+          setObjLeftAngle={(angl) => setObjLeftAngle(angl)}
+          objMass={objMass}
+          setObjMass={(mass) => setObjMass(mass)}
+          objLength={objLength}
+          setObjLength={(length) => setObjLength(length)}
+        />
+        <div>{"     ."}</div>
+        {/* <SettingsGravity /> */}
+        <ObjectItem
+          objForm={objForm}
+          setObjForm={(obj) => setObjForm(obj)}
+          setObjLeftAngle={(angl) => setObjLeftAngle(angl)}
+          playPendulum={playPendulum}
+          setPlayPendulum={(choice) => setPlayPendulum(choice)}
+          setSectionPage={(choice) => setSectionPage(choice)}
+        />
+        <Stopwatch />
+      </div>
     </div>
   );
 }
