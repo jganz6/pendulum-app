@@ -32,6 +32,7 @@ function App() {
     <div className="App">
       <div className="sideSec">
         <div className="headSecStart">SIMPLE HARMONIC MOTION SIMULATION</div>
+        <div className="headerSub">Tujuan Pembelajaran: Mengetahui hubungan massa, panjang tali, dan simpangan awal terhadap periode bandul.</div>
         <div className="headerSec">
           <img src={LogoUpi} alt="LogoUpi" />
           <div className="textHeader">

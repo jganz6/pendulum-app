@@ -13,6 +13,11 @@
   width: calc(100vw - 560px);
   background-color: #adc3df;
 }
+.headerSub{
+  width: calc(100% - 50px);
+  padding: 5px;
+  color: #fff;
+}
 .headerSec {
   position: absolute;
   bottom: 0;
